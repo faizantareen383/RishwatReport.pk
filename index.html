@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RishwatReport.pk - Report Corruption</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e8f0fe;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #006600;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="file"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 80px;
+    }
+
+    .anon-toggle {
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: #006600;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #004d00;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>RishwatReport.pk - حکومت کے خلاف آواز</h1>
+    <p>کرپشن کی اطلاع دیں، تصویر یا ویڈیو کے ساتھ</p>
+  </header>
+
+  <div class="container">
+    <form id="reportForm">
+      <label for="officer">Officer Name (Optional)</label>
+      <input type="text" id="officer" name="officer" placeholder="e.g. Inspector Malik" />
+
+      <label for="department">Department</label>
+      <select id="department" name="department">
+        <option value="" disabled selected>Select a department</option>
+        <option>Police</option>
+        <option>Patwari</option>
+        <option>WAPDA</option>
+        <option>Education</option>
+        <option>Customs</option>
+        <option>Other</option>
+      </select>
+
+      <label for="location">Location of Incident</label>
+      <input type="text" id="location" name="location" placeholder="City, Area" required />
+
+      <label for="date">Date & Time (Optional)</label>
+      <input type="text" id="date" name="date" placeholder="e.g. 25 July 2025, 6 PM" />
+
+      <label for="description">Description</label>
+      <textarea id="description" name="description" placeholder="What happened? Please describe in detail." required></textarea>
+
+      <label for="proof">Upload Photo/Video Proof</label>
+      <input type="file" id="proof" name="proof" accept="image/*,video/*" required />
+
+      <label for="cnic">Your CNIC Number</label>
+      <input type="text" id="cnic" name="cnic" placeholder="e.g. 35202-1234567-8" required />
+
+      <label for="contact">Your Phone Number</label>
+      <input type="text" id="contact" name="contact" placeholder="03XX-XXXXXXX" required />
+
+      <label for="otp">Enter OTP Sent to Your Phone</label>
+      <input type="text" id="otp" name="otp" placeholder="6-digit code" required />
+
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <div class="anon-toggle">
+        <label><input type="checkbox" /> Report anonymously</label>
+      </div>
+
+      <button type="submit">Submit Report</button>
+    </form>
+    <div class="footer">
+      <p>All reports are confidential and secure. False reporting may result in legal action.</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("reportForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Your report has been submitted. Thank you for helping make Pakistan corruption-free.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
